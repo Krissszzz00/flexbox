@@ -1,0 +1,32 @@
+/* SZÜLŐ
+ display: grid
+ grid-template-columns: 1fr 2fr
+ grid-template-areas: "" 
+
+display: flex
+flex-direction: *****
+flex-wrap: */
+
+/* gyerek: grid-area: fejlec        flex: _  _  _ ; (engedem-e méretezni --- milyen arányban --- mérete) */
+
+article{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+div{
+    flex: 0 0 100px; /* engedem-e méretezni --- milyen arányban --- mérete */
+}
+
+div:first-child{ /* utolsó auto ha 2-szörösre akarom növelni */
+    color: red;
+    flex: 0 2 auto;
+    order: 2;
+}
+
+#masodik{
+    order: 1;
+}
